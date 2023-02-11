@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="Text/Html; Charset=Utf-8" />
+    <meta name="" content="" />
+    <title>Popup Message</title>
+    <link rel="Stylesheet" href="Style.Css" />
+    <style>
+        .Body {
+            font-family: Arial, Sans-Serif;
+            background: Url(Http://Www.Shukatsu-Note.Com/Wp-Content/Uploads/2014/12/Computer-564136_1280.Jpg) No-Repeat;
+            background-size: Cover;
+            height: 100vh;
+        }
+        
+        .Box {
+            width: 10px;
+            margin: 0 Auto;
+            background: Rgba(255, 255, 255, 0.2);
+            padding: 3px;
+            border: 2px Solid white;
+            border-radius: 10px;
+            background-clip: Padding-Box;
+            text-align: Center;
+        }
+        
+        .Button:hover {
+            background: #06d85f;
+        }
+        
+        .Overlay {
+            position: Fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: Rgba(0, 0, 0, 0.7);
+            transition: Opacity 500ms;
+            visibility: Hidden;
+            opacity: 0;
+        }
+        
+        .Overlay:target {
+            visibility: Visible;
+            opacity: 1;
+        }
+        
+        .Popup {
+            margin: 70px Auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            width: 30%;
+            position: Relative;
+            transition: All 5s Ease-In-Out;
+        }
+        
+        .Popup H2 {
+            margin-top: 0;
+            color: #333;
+            font-family: Tahoma, Arial, Sans-Serif;
+        }
+        
+        .Popup .Close {
+            position: Absolute;
+            top: 20px;
+            right: 30px;
+            transition: All 200ms;
+            font-size: 30px;
+            font-weight: Bold;
+            text-decoration: None;
+            color: #333;
+        }
+        
+        .Popup .Close:hover {
+            color: #06d85f;
+        }
+        
+        .Popup .Content {
+            max-height: 30%;
+            overflow: Auto;
+        }
+        
+        @media Screen And (max-width: 700px) {
+            .Box {
+                width: 70%;
+            }
+            .Popup {
+                width: 70%;
+            }
+        }
+        
+        input[type="submit"] {
+            background-color: #4daea4;
+            color: white;
+            padding: 12px 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: blue;
+        }
+        
+        g {
+            float: left;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="g">
+        <h1 text-align:center>Leave a recommendation</h1>
+        <h4>Name : <input type="text" name="name" /></h4>
+        <p>
+            Message: <textarea name="address" id="" cols="30" rows="10"></textarea>
+        </p>
+    </div>
+    <div class="body">
+        <div class="Box">
+            <button class="button">
+          <a class="Button" href="#Popup1">SUBMIT</a>
+        </button>
+        </div>
+
+        <div id="Popup1" class="Overlay">
+            <div class="Popup">
+                <h2>THANK YOU</h2>
+                <br />
+
+                <a class="Close" href="#">EXIT CLICK ME</a>
+                <div class="Content">
+                    For leaving Recommendation
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
